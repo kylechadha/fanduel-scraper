@@ -1,0 +1,156 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+.search {
+  text-align: center;
+  margin-top: 40px; }
+  .search .search__input {
+    height: 230px; }
+    .search .search__input .search__input__header {
+      font-size: 30px;
+      margin-bottom: 20px; }
+    .search .search__input .search__icon--default {
+      color: #C30032; }
+    .search .search__input .search__icon--valid {
+      font-size: 15px;
+      color: #337ab7;
+      cursor: pointer; }
+    .search .search__input .search__input__message {
+      font-size: 20px;
+      margin-top: 20px; }
+      .search .search__input .search__input__message .search__input__message__error {
+        color: red; }
+  .search .search__results {
+    font-size: 25px; }
+    .search .search__results .search__flex {
+      width: 100%;
+      height: 60px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      -webkit-box-align: center;
+      -webkit-flex-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-color: whitesmoke;
+      padding: 10px; }
+      .search .search__results .search__flex:hover {
+        background-color: #f0f0f0; }
+      .search .search__results .search__flex div {
+        text-align: center;
+        vertical-align: middle; }
+      .search .search__results .search__flex .search__flex__url {
+        font-size: 16px;
+        width: 30%; }
+        .search .search__results .search__flex .search__flex__url a {
+          text-decoration: none; }
+      .search .search__results .search__flex .search__flex__version {
+        font-size: 16px;
+        width: 60%; }
+      .search .search__results .search__flex .search__flex__delete {
+        font-size: 18px;
+        width: 10%; }
+        .search .search__results .search__flex .search__flex__delete span {
+          cursor: pointer; }
+          .search .search__results .search__flex .search__flex__delete span:hover {
+            color: #C30032; }
+
+.slide-animation.ng-enter, .slide-animation.ng-leave {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position: relative;
+  height: 1000px; }
+.slide-animation.ng-enter {
+  z-index: 100;
+  left: 100px;
+  opacity: 0; }
+.slide-animation.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1; }
+.slide-animation.ng-leave {
+  z-index: 101;
+  opacity: 1;
+  left: 0; }
+.slide-animation.ng-leave.ng-leave-active {
+  left: -100px;
+  opacity: 0; }
+
+.spinner {
+  margin: 15px auto;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 10px; }
+
+.spinner > div {
+  background-color: #C30032;
+  height: 100%;
+  width: 3px;
+  display: inline-block;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out; }
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s; }
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s; }
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4); }
+
+  20% {
+    -webkit-transform: scaleY(1); } }
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4); }
+
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
+
+html, body {
+  font-family: 'Open Sans', sans-serif; }
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.navbar-fresh {
+  background-color: #C30032;
+  border-radius: 0px;
+  color: white; }
+  .navbar-fresh a {
+    color: white; }
+    .navbar-fresh a:hover {
+      color: white; }
+
+.navbar-brand {
+  font-weight: 300; }
+  .navbar-brand span, .navbar-brand i {
+    font-size: 26px;
+    margin-top: -4px;
+    vertical-align: middle;
+    margin-right: 2px; }
+
+.footer-image {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .footer-image img {
+    width: 80px; }

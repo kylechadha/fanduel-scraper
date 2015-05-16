@@ -1,0 +1,89 @@
+//
+// Search View SCSS File
+// ----------------------------------
+
+.search {
+  text-align: center;
+  margin-top: 40px;
+
+  .search__input {
+    height: 230px;
+
+    .search__input__header {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    // In lieu of @at-root directive
+    // .search__icon {
+      .search__icon--default {
+        color: #C30032;
+      }
+      .search__icon--valid {
+        font-size: 15px;
+        color: #337ab7;
+        cursor: pointer;
+      }
+    // }
+
+    .search__input__message {
+      font-size: 20px;
+      margin-top: 20px;
+      .search__input__message__error {
+        color: red;
+      }
+    }
+  }
+
+  .search__results {
+    font-size: 25px;
+  
+    .search__flex {      
+      width: 100%;
+      height: 60px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      -webkit-box-align: center;
+      -webkit-flex-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-color: rgb(245, 245, 245);
+      padding: 10px;
+      &:hover {
+        background-color: rgb(240, 240, 240);
+      }
+
+      div {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .search__flex__url {
+        font-size: 16px;
+        width: 30%;
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .search__flex__version {
+        font-size: 16px;
+        width: 60%;
+      }
+
+      .search__flex__delete {
+        font-size: 18px;
+        width: 10%;
+        span {
+          cursor: pointer;
+          &:hover {
+            color: #C30032;
+          }
+        }
+      }
+    }
+  }
+
+
+}
