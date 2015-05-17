@@ -2,6 +2,8 @@ var Nightmare = require('nightmare');
 
 module.exports = function(callback) {
 
+	// !!!! handle if nba is not there
+
   new Nightmare()
     .goto('https://www.fanduel.com/p/login')
       .type('input[type=email]', 'kyle.chadha@gmail.com')
