@@ -1,4 +1,4 @@
-var phantomService = require('./services/phantomService')
+var nightmareService = require('./services/nightmareService')
 
 //
 // ROUTES

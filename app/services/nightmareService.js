@@ -12,14 +12,14 @@ module.exports = function(callback) {
       .wait()
       .click('#-spsel-nhl')
       .click('.contest-type-selector-head-to-head')
-      .click('input[type="checkbox"][value="1"]')
+      .check('input[type="checkbox"][value="1"]')
       .click('.select-team')
       .wait()
-      .screenshot("/Users/kylechadha/test.jpg")
-      .evaluate(function() {
-        return "box";
-      }, function (data) {
-        console.log(data);
+      // .screenshot("/Users/kylechadha/Projects/fanduel-scraper/screenshot.jpg") // use this to debug
+      .url(function(url) {
+      	var data = {
+      		"url": url
+      	}
         callback(null, data);
       })
       .run()
