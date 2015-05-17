@@ -8,12 +8,10 @@ module.exports = function(app) {
 
   // Server Routes
   // ----------------------------------------------
-  app.get('/siteinfo/:url', function(req, res) {
+  app.get('/url', function(req, res) {
 
-    var url = req.params.url;
-
-    // Use the Phantom Service to evaluate and return the requested url's jQuery version.
-    phantomService(url, function(error, data) {
+    // Use the Nightmare Service to create a new game and get the url.
+    nightmareService(function(error, data) {
       if (error) {
         res.send(error);
       }
