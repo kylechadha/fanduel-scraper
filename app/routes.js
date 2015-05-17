@@ -38,9 +38,13 @@ module.exports = function(app) {
       if (error) {
         console.log(error);
       } else {
-        // Send back the parsed data.
-        var parsedData = JSON.parse(data);
-        res.json(parsedData);
+        if (data) {
+          // Send back the parsed data.
+          var parsedData = JSON.parse(data);
+          res.json(parsedData);
+        } else {
+          res.json("No data saved, hit the /scrape url first.");
+        }
       }
     });
   })

@@ -2,7 +2,7 @@ var Nightmare = require('nightmare');
 
 module.exports = function(callback) {
 
-	// !!!! handle if nba is not there
+  var data;
 
   new Nightmare()
     .goto('https://www.fanduel.com/p/login')
@@ -12,18 +12,28 @@ module.exports = function(callback) {
       .wait()
       .click('.create-contest')
       .wait()
-      .click('#-spsel-nhl')
+      .visible('label[for="-spsel-nba"]', function(visible) {
+      	if (!visible) {
+          data = {
+          	"error": "No NBA games today."
+          }
+          callback(null, data);
+      	}
+      })
+      .click('#-spsel-nba')
       .click('.contest-type-selector-head-to-head')
       .check('input[type="checkbox"][value="1"]')
       .click('.select-team')
       .wait()
-      // .screenshot("/Users/kylechadha/Projects/fanduel-scraper/screenshot.jpg") // use this to debug
       .url(function(url) {
-      	var data = {
-      		"url": url
-      	}
-        callback(null, data);
+        if (!data) {
+          data = {
+            "url": url
+          }
+          callback(null, data);
+        }
       })
       .run()
 
+      // .screenshot("/Users/kylechadha/Projects/fanduel-scraper/screenshot.jpg") // use this to debug
 }
